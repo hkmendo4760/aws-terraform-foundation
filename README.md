@@ -29,3 +29,20 @@ flowchart TD
     TF --> MODS[Terraform Modules]
     MODS --> ENVS[Environments]
     ENVS --> DEVENV[Dev Environment Resources]
+
+## 🔄 Terraform Workflow
+
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant TF as Terraform CLI
+    participant DDB as DynamoDB Lock Table
+    participant S3 as S3 State Bucket
+    participant AWS as AWS Resources
+
+    Dev->>TF: terraform init / plan / apply
+    TF->>DDB: Acquire state lock
+    TF->>S3: Read current state
+    TF->>AWS: Create/Update/Delete resources
+    TF->>S3: Write updated state
+    TF->>DDB: Release lock
