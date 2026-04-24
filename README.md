@@ -30,9 +30,6 @@ flowchart TD
     MODS --> ENVS[Environments]
     ENVS --> DEVENV[Dev Environment Resources]
 
-## 🔄 Terraform Workflow
-
-```mermaid
 sequenceDiagram
     participant Dev as Developer
     participant TF as Terraform CLI
