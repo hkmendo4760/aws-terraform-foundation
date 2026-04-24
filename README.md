@@ -9,7 +9,7 @@ A production‑ready Terraform foundation demonstrating:
 - AWS SSO authentication
 - CI/CD readiness with GitHub Actions
 
-This project is designed as a professional showcase of real‑world Terraform practices.
+This project is designed as showcase of real‑world Terraform practices.
 
 ---
 
