@@ -47,3 +47,23 @@ sequenceDiagram
     TF->>S3: Write updated state
     TF->>DDB: Release lock
 ```
+## 📁 Repository Structure
+
+```mermaid
+graph TD
+    A[Repository Root] --> B[backend/]
+    A --> C[modules/]
+    A --> D[environments/]
+    A --> E[backend.tf]
+    A --> F[backend-setup.sh]
+    A --> G[.github/workflows]
+
+    B --> B1[S3 Backend Module]
+    B --> B2[DynamoDB Lock Module]
+
+    C --> C1[S3 Bucket Module]
+    C --> C2[Future Modules]
+
+    D --> D1[dev/]
+    D1 --> D2[main.tf]
+```
