@@ -1,6 +1,5 @@
 provider "aws" {
   region  = "us-west-2"
-  profile = "dbn-sso" # This is the missing link!
 }
 
 data "aws_ami" "ubuntu" {

@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "hector-labs"
+
+    workspaces {
+      name = "aws-terraform-foundation"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
