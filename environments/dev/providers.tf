@@ -17,9 +17,11 @@ terraform {
     }
   }
 }
-
 provider "aws" {
   region = var.aws_region
+
+  # Force the provider to resolve authentication tokens via the global STS endpoint
+  sts_region_endpoints = "global"
 
   # Enforcement of standardized naming conventions across your live dev account
   default_tags {
