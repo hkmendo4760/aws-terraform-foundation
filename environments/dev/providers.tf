@@ -26,7 +26,7 @@ provider "aws" {
     tags = {
       Environment = "dev"
       ManagedBy   = "terraform"
-      Project     = "wsldc-guru-infrastructure"
+      Project     = "wsldc-guru-infra"
     }
   }
 }
